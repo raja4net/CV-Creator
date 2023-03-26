@@ -1,10 +1,10 @@
 import styled from "styled-components";
 
 const Wrapper = styled.div`
-  padding: 1rem;
+  padding: 0.9rem;
 `;
 
-const Input = styled.input.attrs({})`
+const Input = styled.input`
   width: 25rem;
   font: 2rem;
   overflow: hidden;
@@ -22,6 +22,7 @@ const TextArea = styled.textarea`
   border: none;
   margin: 10px;
   resize: none;
+  font-style: inherit;
 `;
 
 const Label = styled.label`
@@ -77,6 +78,25 @@ const PersonalDetails = () => {
         <Input type='text' id='phone' name='phone' placeholder='Phone'></Input>
 
         <Input type='email' id='email' name='email' placeholder='Email'></Input>
+
+        <Input
+          type='text'
+          id='twitter'
+          name='twitter'
+          placeholder='@twitter'
+        ></Input>
+        <Input
+          type='text'
+          id='github'
+          name='github'
+          placeholder='https://github.com/your-github'
+        ></Input>
+        <Input
+          type='text'
+          id='linkedin'
+          name='linkedin'
+          placeholder='https://linkedin.com/your-linkedin'
+        ></Input>
 
         <TextArea
           id='about'

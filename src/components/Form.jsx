@@ -1,5 +1,7 @@
 import PersonalDetails from "./PersonalDetails";
 import Experience from "./Experience";
+import Skills from "./Skills";
+import Education from "./Education";
 import styled from "styled-components";
 
 const FormWrapper = styled.div`
@@ -15,6 +17,8 @@ const Form = () => {
       <FormWrapper>
         <PersonalDetails />
         <Experience />
+        <Skills />
+        <Education />
       </FormWrapper>
     </>
   );
