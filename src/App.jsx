@@ -1,14 +1,13 @@
-import './styles/App.css'
-import Header from './components/Header'
-import Form from './components/Form'
+import Header from "./components/Header";
+import Form from "./components/Form";
 
 function App() {
   return (
     <div>
-    <Header />
-    <Form />
+      <Header />
+      <Form />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
