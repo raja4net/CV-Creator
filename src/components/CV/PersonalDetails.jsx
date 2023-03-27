@@ -1,3 +1,4 @@
+import React, { useRef } from "react";
 import styled from "styled-components";
 
 const Wrapper = styled.div`
@@ -30,19 +31,22 @@ const Label = styled.label`
   font-size: 0.9rem;
 `;
 
-const PersonalDetails = () => {
+const PersonalDetails = ({ personalInfo, onChange }) => {
   return (
     <>
       <Wrapper>
         <h2> Personal Details</h2>
-        <Label for='picture'>Upload Photo:</Label>
-        <Input type='file' id='picture' name='picture'></Input>
-
+        <Label forHTML='picture'>
+          Upload Photo:
+          <Input type='file' onChange={(e) => onChange(e)}></Input>
+        </Label>
         <Input
           type='text'
           id='firstname'
           name='firstname'
           placeholder='First Name'
+          value={personalInfo.firstname}
+          onChange={(e) => onChange(e)}
         ></Input>
 
         <Input
@@ -50,6 +54,8 @@ const PersonalDetails = () => {
           id='lastname'
           name='lastname'
           placeholder='Last Name'
+          value={personalInfo.lastname}
+          onChange={(e) => onChange(e)}
         ></Input>
 
         <Input
@@ -57,15 +63,26 @@ const PersonalDetails = () => {
           id='profession'
           name='profession'
           placeholder='Profession'
+          value={personalInfo.profession}
+          onChange={(e) => onChange(e)}
         ></Input>
 
-        <Input type='text' id='city' name='city' placeholder='City'></Input>
+        <Input
+          type='text'
+          id='city'
+          name='city'
+          placeholder='City'
+          value={personalInfo.city}
+          onChange={(e) => onChange(e)}
+        ></Input>
 
         <Input
           type='text'
           id='country'
           name='country'
           placeholder='Country'
+          value={personalInfo.country}
+          onChange={(e) => onChange(e)}
         ></Input>
 
         <Input
@@ -73,29 +90,51 @@ const PersonalDetails = () => {
           id='pincode'
           name='pincode'
           placeholder='Zip / Pin Code'
+          value={personalInfo.pincode}
+          onChange={(e) => onChange(e)}
         ></Input>
 
-        <Input type='text' id='phone' name='phone' placeholder='Phone'></Input>
+        <Input
+          type='text'
+          id='phone'
+          name='phone'
+          placeholder='Phone'
+          value={personalInfo.phone}
+          onChange={(e) => onChange(e)}
+        ></Input>
 
-        <Input type='email' id='email' name='email' placeholder='Email'></Input>
+        <Input
+          type='email'
+          id='email'
+          name='email'
+          placeholder='Email'
+          value={personalInfo.email}
+          onChange={(e) => onChange(e)}
+        ></Input>
 
         <Input
           type='text'
           id='twitter'
           name='twitter'
           placeholder='@twitter'
+          value={personalInfo.twitter}
+          onChange={(e) => onChange(e)}
         ></Input>
         <Input
           type='text'
           id='github'
           name='github'
           placeholder='https://github.com/your-github'
+          value={personalInfo.github}
+          onChange={(e) => onChange(e)}
         ></Input>
         <Input
           type='text'
           id='linkedin'
           name='linkedin'
           placeholder='https://linkedin.com/your-linkedin'
+          value={personalInfo.linkedin}
+          onChange={(e) => onChange(e)}
         ></Input>
 
         <TextArea
@@ -104,6 +143,8 @@ const PersonalDetails = () => {
           rows='4'
           cols='50'
           placeholder='About yourself'
+          value={personalInfo.about}
+          onChange={(e) => onChange(e)}
         ></TextArea>
       </Wrapper>
     </>

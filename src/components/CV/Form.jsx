@@ -11,11 +11,14 @@ const FormWrapper = styled.div`
   width: 40vw;
 `;
 
-const Form = () => {
+const Form = ({ cv, onChangePersonal }) => {
   return (
     <>
       <FormWrapper>
-        <PersonalDetails />
+        <PersonalDetails
+          personalInfo={cv.personalInfo}
+          onChange={onChangePersonal}
+        />
         <Experience />
         <Skills />
         <Education />
