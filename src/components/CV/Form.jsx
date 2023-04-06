@@ -11,7 +11,7 @@ const FormWrapper = styled.div`
   width: 40vw;
 `;
 
-const Form = ({ cv, onChangePersonal }) => {
+const Form = ({ cv, onChangePersonal, onChangeEducation }) => {
   return (
     <>
       <FormWrapper>
@@ -21,7 +21,7 @@ const Form = ({ cv, onChangePersonal }) => {
         />
         <Experience />
         <Skills />
-        <Education />
+        <Education education={cv.education} onChange={onChangeEducation} />
       </FormWrapper>
     </>
   );

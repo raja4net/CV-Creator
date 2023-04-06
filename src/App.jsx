@@ -3,6 +3,7 @@ import Header from "./components/CV/Header";
 import Form from "./components/CV/Form";
 import CVPreview from "./components/CVPreview/CVPreview";
 import EmptyCV from "./components/CV/EmptyCV";
+import Education from "./components/CV/Education";
 
 const App = () => {
   const [cv, setCV] = useState(EmptyCV);
@@ -41,10 +42,30 @@ const App = () => {
     };
     reader.readAsDataURL(file);
   };
+
+  const handleChangeEducation = (e, id) => {
+    const { name, value } = e.target
+
+    setCV((prevState) => {
+      const newEducation = prevState.education.map((educationItem) => {
+        if (educationItem.id === id) {
+          return { ...educationItem, [name]: value }
+        }
+        console.log(educationItem)
+        return educationItem
+      })
+      return { ...prevState, education: [...newEducation] }
+    })
+  }
+
   return (
     <>
       <Header />
-      <Form cv={cv} onChangePersonal={handleChangePersonal} />
+      <Form
+        cv={cv}
+        onChangePersonal={handleChangePersonal}
+        onChangeEducation={handleChangeEducation}
+      />
       <CVPreview cv={cv} />
     </>
   );

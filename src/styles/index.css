@@ -34,6 +34,34 @@ h1 {
   font-weight: 600;
 }
 
+h2 {
+  font-size: 1.8rem;
+}
+
+h3 {
+  font-size: 1rem;
+}
+
+p {
+  font-size: 1.5rem;
+}
+
+img {
+  margin: 0.8rem;
+}
+
+.profile-pic {
+  border-radius: 50%;
+}
+
+.section {
+  border-bottom: 1px solid white;
+}
+
+.section-heading {
+  border-bottom: 0.5px solid rgb(147, 147, 154);
+}
+
 button {
   border-radius: 8px;
   border: 1px solid transparent;

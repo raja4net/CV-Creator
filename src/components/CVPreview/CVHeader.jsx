@@ -24,16 +24,6 @@ const CVHeader = ({ personalInfo }) => {
           </h1>
           <p>{profession}</p>
         </div>
-        <div>
-          <h3>{phone}</h3>
-          <h3>{email}</h3>
-          <h3>
-            {city} {pincode} {country}
-          </h3>
-          <h3>{github}</h3>
-          <h3>{linkedin}</h3>
-          <h3>{twitter}</h3>
-        </div>
       </CVHeaderWrapper>
     </>
   );
@@ -41,12 +31,11 @@ const CVHeader = ({ personalInfo }) => {
 
 const CVHeaderWrapper = styled.div`
   display: flex;
-  justify-content: center;
   align-items: center;
-
   padding: 2rem;
   background-color: rgb(90, 90, 90);
   color: white;
+  width: 800px;
 `;
 
 export default CVHeader;

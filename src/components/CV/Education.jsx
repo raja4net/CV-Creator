@@ -1,38 +1,14 @@
-import styled from "styled-components";
+import React from "react";
+import Input from "../../util/Input";
+import Wrapper from "../../util/Wrapper";
+import Label from "../../util/Label";
+import Button from "../../util/Button";
 
-const Wrapper = styled.div`
-  padding: 0.9rem;
-`;
+const Education = ({ education, onChange }) => {
+  const educationItems = education.map((item) => {
+    <div key={item.id}>{item.institute}</div>;
+  });
 
-const Input = styled.input`
-  width: 25rem;
-  font: 2rem;
-  overflow: hidden;
-  border-radius: 3px;
-  border: none;
-  line-height: 2;
-  margin: 10px;
-`;
-
-const Label = styled.label`
-  font-weight: 400;
-  font-size: 1rem;
-`;
-
-const Button = styled.button`
-  width: 25.3rem;
-  margin: 8px 0 8px 7px;
-  font-size: 1rem;
-  text-align: center;
-  outline:: none;
-`;
-
-const DeleteButton = styled(Button)`
-  background-color: #a2100c;
-  color: white;
-`;
-
-const Education = () => {
   return (
     <>
       <Wrapper>
@@ -43,6 +19,8 @@ const Education = () => {
           id='institute'
           name='institute'
           placeholder='Institution Name'
+          value={education.institute}
+          onChange={(e) => onChange(e, id)}
         ></Input>
 
         <Input
@@ -50,6 +28,8 @@ const Education = () => {
           id='location'
           name='location'
           placeholder='School Location'
+          value={education.location}
+          onChange={(e) => onChange(e, id)}
         ></Input>
 
         <Input
@@ -57,6 +37,8 @@ const Education = () => {
           id='degree'
           name='degree'
           placeholder='Degree'
+          value={education.degree}
+          onChange={(e) => onChange(e, id)}
         ></Input>
 
         <Input
@@ -64,6 +46,8 @@ const Education = () => {
           id='studyField'
           name='studyField'
           placeholder='Field of Study'
+          value={education.studyField}
+          onChange={(e) => onChange(e, id)}
         ></Input>
 
         <Input
@@ -73,6 +57,8 @@ const Education = () => {
           onfocus="(this.type='date')"
           onblur="if(this.value==''){this.type='text'}"
           placeholder='Start Date'
+          value={education.startDate}
+          onChange={(e) => onChange(e, id)}
         ></Input>
 
         <Input
@@ -82,9 +68,11 @@ const Education = () => {
           onfocus="(this.type='date')"
           onblur="if(this.value==''){this.type='text'}"
           placeholder='End Date'
+          value={education.endDate}
+          onChange={(e) => onChange(e, id)}
         ></Input>
-        <Button>Add</Button>
-        <DeleteButton>Delete</DeleteButton>
+        <Button type={"primary"}>Add</Button>
+        <Button type={"warning"}>Delete</Button>
       </Wrapper>
     </>
   );
