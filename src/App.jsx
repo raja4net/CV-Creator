@@ -3,7 +3,6 @@ import Header from "./components/CV/Header";
 import Form from "./components/CV/Form";
 import CVPreview from "./components/CVPreview/CVPreview";
 import EmptyCV from "./components/CV/EmptyCV";
-import Education from "./components/CV/Education";
 
 const App = () => {
   const [cv, setCV] = useState(EmptyCV);
@@ -44,19 +43,18 @@ const App = () => {
   };
 
   const handleChangeEducation = (e, id) => {
-    const { name, value } = e.target
+    const { name, value } = e.target;
 
     setCV((prevState) => {
       const newEducation = prevState.education.map((educationItem) => {
         if (educationItem.id === id) {
-          return { ...educationItem, [name]: value }
+          return { ...educationItem, [name]: value };
         }
-        console.log(educationItem)
-        return educationItem
-      })
-      return { ...prevState, education: [...newEducation] }
-    })
-  }
+        return educationItem;
+      });
+      return { ...prevState, education: [...newEducation] };
+    });
+  };
 
   return (
     <>

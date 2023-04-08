@@ -23,7 +23,7 @@ const Skills = () => {
         <TextArea
           id='skills'
           name='skills'
-          placeholder='Skills'
+          placeholder='Enter skills in different lines to add bullets'
           rows='4'
           cols='50'
         ></TextArea>

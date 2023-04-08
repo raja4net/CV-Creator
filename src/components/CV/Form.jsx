@@ -1,7 +1,8 @@
 import PersonalDetails from "./PersonalDetails";
+import Education from "./Education";
 import Experience from "./Experience";
 import Skills from "./Skills";
-import Education from "./Education";
+
 import styled from "styled-components";
 
 const FormWrapper = styled.div`
@@ -21,7 +22,7 @@ const Form = ({ cv, onChangePersonal, onChangeEducation }) => {
         />
         <Experience />
         <Skills />
-        <Education education={cv.education} onChange={onChangeEducation} />
+        <Education educationArray={cv.education} onChange={onChangeEducation} />
       </FormWrapper>
     </>
   );

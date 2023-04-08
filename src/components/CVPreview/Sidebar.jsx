@@ -1,14 +1,9 @@
 import React from "react";
 import emptyAvatar from "../../assets/emptyAvatar.png";
 import styled from "styled-components";
-
-
+import EducationItem from "./EducationItem";
 
 const Sidebar = ({ personalInfo, education }) => {
- const educationItems = education.map((item) => {
-    <div key={item.id}>{item.institute}</div>
-  })
-
   const {
     firstname,
     lastname,
@@ -22,6 +17,11 @@ const Sidebar = ({ personalInfo, education }) => {
     github,
     linkedin,
   } = personalInfo;
+
+  const educationItems = education.map((educationItem) => (
+    <EducationItem key={educationItem.id} educationItem={educationItem} />
+  ));
+
   return (
     <>
       <SidebarWrapper>
@@ -30,19 +30,17 @@ const Sidebar = ({ personalInfo, education }) => {
           src={emptyAvatar}
           alt='profile picture'
         ></img>
-        <div className='section'>
-          <h2 className='section-heading'>Contact</h2>
-          <p>Phone </p>
-          <h3>{phone}</h3>
-          <p>Email </p>
-          <h3>{email}</h3>
-          <p>Address </p>
-          <h3>{city + ", " + country}</h3>
-        </div>
-        <div className='section'>
-          <h2 className='section-heading'>Education</h2>
-          {educationItems}
-        </div>
+
+        <h2 className='section-heading'>Contact</h2>
+        <p>Phone </p>
+        <h3>{phone}</h3>
+        <p>Email </p>
+        <h3>{email}</h3>
+        <p>Address </p>
+        <h3>{city + ", " + country}</h3>
+
+        <h2 className='section-heading'>Education</h2>
+        {educationItems}
       </SidebarWrapper>
     </>
   );
