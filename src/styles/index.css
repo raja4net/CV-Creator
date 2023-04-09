@@ -50,15 +50,30 @@ img {
   margin: 0.8rem;
 }
 
-.profile-pic {
-  border-radius: 50%;
+textarea {
+  white-space: pre-wrap;
 }
 
-.section {
+li {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.profile-pic {
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
 }
 
 .section-heading {
   border-bottom: 0.5px solid rgb(147, 147, 154);
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+.skills {
+  display: flex;
+  flex-direction: column;
 }
 
 button {

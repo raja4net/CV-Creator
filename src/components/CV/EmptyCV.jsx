@@ -3,7 +3,7 @@ import emptyAvatar from "../../../src/assets/emptyAvatar.png";
 
 const EmptyCV = {
   personalInfo: {
-    picture: emptyAvatar,
+    photo: emptyAvatar,
     firstname: "",
     lastname: "",
     profession: "",
@@ -29,7 +29,7 @@ const EmptyCV = {
       role: "",
     },
   ],
-  skils: "",
+  skills: " ",
   education: [
     {
       id: uuidv4(),

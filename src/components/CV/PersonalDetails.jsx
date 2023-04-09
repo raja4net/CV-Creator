@@ -36,9 +36,9 @@ const PersonalDetails = ({ personalInfo, onChange }) => {
     <>
       <Wrapper>
         <h2> Personal Details</h2>
-        <Label forHTML='picture'>
+        <Label forHTML='photo'>
           Upload Photo:
-          <Input type='file' onChange={(e) => onChange(e)}></Input>
+          <Input type='file' name='photo' onChange={(e) => onChange(e)}></Input>
         </Label>
         <Input
           type='text'

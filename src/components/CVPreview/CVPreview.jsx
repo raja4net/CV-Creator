@@ -6,7 +6,11 @@ const CVPreview = ({ cv }) => {
   return (
     <>
       <Wrapper>
-        <Sidebar personalInfo={cv.personalInfo} education={cv.education} />
+        <Sidebar
+          personalInfo={cv.personalInfo}
+          education={cv.education}
+          skills={cv.skills}
+        />
         <CVHeader personalInfo={cv.personalInfo} />
       </Wrapper>
     </>

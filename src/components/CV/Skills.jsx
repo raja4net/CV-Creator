@@ -15,7 +15,7 @@ const TextArea = styled.textarea`
   font-style: inherit;
 `;
 
-const Skills = () => {
+const Skills = ({ skills, onChange }) => {
   return (
     <>
       <Wrapper>
@@ -23,7 +23,9 @@ const Skills = () => {
         <TextArea
           id='skills'
           name='skills'
-          placeholder='Enter skills in different lines to add bullets'
+          onChange={(e) => onChange(e)}
+          value={skills.skills}
+          placeholder='Add each skill on new line to add bullets'
           rows='4'
           cols='50'
         ></TextArea>

@@ -29,17 +29,14 @@ const App = () => {
     const file = e.target.files[0];
     if (!file) return;
 
-    const reader = new FileReader();
-    reader.onload = () => {
-      setCV((prevState) => ({
-        ...prevState,
-        personalInfo: {
-          ...prevState.personalInfo,
-          [name]: reader.result,
-        },
-      }));
-    };
-    reader.readAsDataURL(file);
+    const imgUrl = URL.createObjectURL(file);
+    setCV((prevState) => ({
+      ...prevState,
+      personalInfo: {
+        ...prevState.personalInfo,
+        [name]: imgUrl,
+      },
+    }));
   };
 
   const handleChangeEducation = (e, id) => {
@@ -56,6 +53,18 @@ const App = () => {
     });
   };
 
+  const handleChangeSkills = (e) => {
+    const { name, value } = e.target;
+
+    setCV((prevState) => ({
+      ...prevState,
+      skills: {
+        ...prevState.skills,
+        [name]: value,
+      },
+    }));
+  };
+
   return (
     <>
       <Header />
@@ -63,6 +72,7 @@ const App = () => {
         cv={cv}
         onChangePersonal={handleChangePersonal}
         onChangeEducation={handleChangeEducation}
+        onChangeSkills={handleChangeSkills}
       />
       <CVPreview cv={cv} />
     </>

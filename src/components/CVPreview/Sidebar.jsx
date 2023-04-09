@@ -1,10 +1,11 @@
 import React from "react";
 import emptyAvatar from "../../assets/emptyAvatar.png";
-import styled from "styled-components";
 import EducationItem from "./EducationItem";
+import styled from "styled-components";
 
-const Sidebar = ({ personalInfo, education }) => {
+const Sidebar = ({ personalInfo, education, skills }) => {
   const {
+    photo,
     firstname,
     lastname,
     profession,
@@ -22,15 +23,12 @@ const Sidebar = ({ personalInfo, education }) => {
     <EducationItem key={educationItem.id} educationItem={educationItem} />
   ));
 
+  const skillArray = String(skills.skills).trim().split("\n");
+
   return (
     <>
       <SidebarWrapper>
-        <img
-          className='profile-pic'
-          src={emptyAvatar}
-          alt='profile picture'
-        ></img>
-
+        <img className='profile-pic' src={photo} alt='profile picture'></img>
         <h2 className='section-heading'>Contact</h2>
         <p>Phone </p>
         <h3>{phone}</h3>
@@ -38,9 +36,14 @@ const Sidebar = ({ personalInfo, education }) => {
         <h3>{email}</h3>
         <p>Address </p>
         <h3>{city + ", " + country}</h3>
-
         <h2 className='section-heading'>Education</h2>
         {educationItems}
+        <h2 className='section-heading'>Skills</h2>
+
+        <ul>
+          {skillArray &&
+            skillArray.map((item, index) => <li key={index}>{item}</li>)}
+        </ul>
       </SidebarWrapper>
     </>
   );
