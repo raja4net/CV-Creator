@@ -49,7 +49,7 @@ const CVHeaderWrapper = styled.div`
   padding: 2rem;
   background-color: rgb(90, 90, 90);
   color: white;
-  width: 800px;
+  height: 200px;
 `;
 
 const ContentWrapper = styled.div`

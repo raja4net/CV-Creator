@@ -55,6 +55,7 @@ const SidebarWrapper = styled.div`
   flex-direction: column;
   align-items: center;
   color: white;
+  line-height: 1;
 `;
 
 export default Sidebar;

@@ -32,6 +32,8 @@ body {
 h1 {
   font-size: 2.5rem;
   font-weight: 600;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 h2 {
@@ -40,10 +42,14 @@ h2 {
 
 h3 {
   font-size: 1rem;
+  margin: 5px;
 }
 
 p {
   font-size: 1.5rem;
+  padding-right: 20px;
+  text-align: justify;
+  line-height: 1;
 }
 
 img {
@@ -57,6 +63,7 @@ textarea {
 li {
   font-size: 1rem;
   line-height: 1.5;
+  margin-left: -50px;
 }
 
 .profile-pic {
@@ -69,11 +76,30 @@ li {
   border-bottom: 0.5px solid rgb(147, 147, 154);
   padding-bottom: 0;
   margin-bottom: 0;
+  width: max-content;
 }
 
 .skills {
   display: flex;
   flex-direction: column;
+}
+
+.circle {
+  margin-top: 15px;
+}
+
+.divCenter {
+  display: grid;
+  place-items: center;
+}
+
+.experience {
+  padding-left: 40px;
+  margin-top: 30px;
+  padding-top: -5px;
+  margin-left: -6px;
+  border-left: 1px solid black;
+  overflow-y: hidden;
 }
 
 button {

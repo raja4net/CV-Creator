@@ -21,6 +21,8 @@ const CVPreview = ({ cv }) => {
 const Wrapper = styled.div`
   margin: 1rem;
   display: flex;
+  width: 90%;
+  border: 1px solid black;
 `;
 
 export default CVPreview;
