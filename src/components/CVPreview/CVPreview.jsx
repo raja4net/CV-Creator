@@ -11,7 +11,8 @@ const CVPreview = ({ cv }) => {
           education={cv.education}
           skills={cv.skills}
         />
-        <CVHeader personalInfo={cv.personalInfo} />
+
+        <CVHeader personalInfo={cv.personalInfo} experience={cv.experience} />
       </Wrapper>
     </>
   );

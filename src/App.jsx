@@ -5,6 +5,7 @@ import CVPreview from "./components/CVPreview/CVPreview";
 import EmptyCV from "./components/CV/EmptyCV";
 
 const App = () => {
+  console.clear();
   const [cv, setCV] = useState(EmptyCV);
 
   const handleChangePersonal = (e) => {
@@ -65,6 +66,20 @@ const App = () => {
     }));
   };
 
+  const handleChangeExperience = (e, id) => {
+    const { name, value } = e.target;
+
+    setCV((prevState) => {
+      const newExperience = prevState.experience.map((experienceItem) => {
+        if (experienceItem.id === id) {
+          return { ...experienceItem, [name]: value };
+        }
+        return experienceItem;
+      });
+      return { ...prevState, experience: [...newExperience] };
+    });
+  };
+
   return (
     <>
       <Header />
@@ -73,6 +88,7 @@ const App = () => {
         onChangePersonal={handleChangePersonal}
         onChangeEducation={handleChangeEducation}
         onChangeSkills={handleChangeSkills}
+        onChangeExperience={handleChangeExperience}
       />
       <CVPreview cv={cv} />
     </>

@@ -1,5 +1,4 @@
 import React from "react";
-import emptyAvatar from "../../assets/emptyAvatar.png";
 import EducationItem from "./EducationItem";
 import styled from "styled-components";
 

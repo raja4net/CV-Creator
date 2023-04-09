@@ -12,7 +12,14 @@ const FormWrapper = styled.div`
   width: 40vw;
 `;
 
-const Form = ({ cv, onChangePersonal, onChangeEducation, onChangeSkills }) => {
+const Form = ({
+  cv,
+  onChangePersonal,
+  onChangeEducation,
+  onChangeSkills,
+  onChangeExperience,
+}) => {
+  console.log(cv.experience);
   return (
     <>
       <FormWrapper>
@@ -20,7 +27,10 @@ const Form = ({ cv, onChangePersonal, onChangeEducation, onChangeSkills }) => {
           personalInfo={cv.personalInfo}
           onChange={onChangePersonal}
         />
-        <Experience />
+        <Experience
+          experienceArray={cv.experience}
+          onChange={onChangeExperience}
+        />
         <Skills skills={cv.skills} onChange={onChangeSkills} />
         <Education educationArray={cv.education} onChange={onChangeEducation} />
       </FormWrapper>

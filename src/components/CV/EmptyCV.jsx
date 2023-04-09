@@ -29,7 +29,7 @@ const EmptyCV = {
       role: "",
     },
   ],
-  skills: " ",
+  skills: "",
   education: [
     {
       id: uuidv4(),
