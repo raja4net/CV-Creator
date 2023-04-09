@@ -47,9 +47,8 @@ const CVHeader = ({ personalInfo, experience }) => {
 const CVHeaderWrapper = styled.div`
   display: flex;
   padding: 2rem;
-  background-color: rgb(90, 90, 90);
-  color: white;
-  height: 200px;
+  background-color: white;
+  color: black;
 `;
 
 const ContentWrapper = styled.div`
@@ -58,7 +57,7 @@ const ContentWrapper = styled.div`
 `;
 
 const ExperienceWrapper = styled.div`
-margin-left:1rem;
+margin-left:2rem;
 display: flex:
 background-color: white;
 color: black;font-size: 1.2rem;
