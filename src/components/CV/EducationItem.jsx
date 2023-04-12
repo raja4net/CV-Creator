@@ -62,6 +62,7 @@ const EducationItem = ({ educationItem, id, onChange }) => {
         value={educationItem.endDate}
         onChange={(e) => onChange(e, id)}
       ></Input>
+
       <Button type={"warning"}>Delete</Button>
     </>
   );

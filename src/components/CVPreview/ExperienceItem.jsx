@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 const ExperienceItem = ({ experienceItem }) => {
-  console.log(experienceItem);
   return (
     <>
       <Wrapper>

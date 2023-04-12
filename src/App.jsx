@@ -1,11 +1,12 @@
 import React, { useState } from "react";
+import { v4 as uuidv4 } from "uuid";
 import Header from "./components/CV/Header";
 import Form from "./components/CV/Form";
 import CVPreview from "./components/CVPreview/CVPreview";
 import EmptyCV from "./components/CV/EmptyCV";
 
 const App = () => {
-  console.clear();
+  // console.clear();
   const [cv, setCV] = useState(EmptyCV);
 
   const handleChangePersonal = (e) => {
@@ -80,6 +81,25 @@ const App = () => {
     });
   };
 
+  const handleAddEducation = () => {
+    console.log("clicked");
+    setCV((prevState) => ({
+      ...prevState,
+      education: [
+        ...prevState.education,
+        {
+          id: uuidv4(),
+          universityName: "",
+          city: "",
+          degree: "",
+          subject: "",
+          from: "",
+          to: "",
+        },
+      ],
+    }));
+  };
+
   return (
     <>
       <Header />
@@ -89,6 +109,7 @@ const App = () => {
         onChangeEducation={handleChangeEducation}
         onChangeSkills={handleChangeSkills}
         onChangeExperience={handleChangeExperience}
+        onAddEducation={handleAddEducation}
       />
       <CVPreview cv={cv} />
     </>

@@ -5,7 +5,7 @@ import Label from "../../util/Label";
 import Button from "../../util/Button";
 import EducationItem from "./EducationItem";
 
-const Education = ({ educationArray, onChange }) => {
+const Education = ({ educationArray, onChange, onAdd }) => {
   const educationItems = educationArray?.map((educationItem) => (
     <EducationItem
       key={educationItem.id}
@@ -19,7 +19,9 @@ const Education = ({ educationArray, onChange }) => {
     <Wrapper>
       <h2 className='section-heading'>Education</h2>
       {educationItems}
-      <Button type={"primary"}>Add</Button>
+      <Button type={"primary"} onClick={onAdd}>
+        Add
+      </Button>
     </Wrapper>
   );
 };

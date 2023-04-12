@@ -3,7 +3,6 @@ import styled from "styled-components";
 import ExperienceItem from "./ExperienceItem";
 
 const CVHeader = ({ personalInfo, experience }) => {
-  console.log(experience);
   const {
     firstname,
     lastname,

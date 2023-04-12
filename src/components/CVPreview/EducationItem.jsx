@@ -1,6 +1,7 @@
 const EducationItem = ({ educationItem }) => {
   return (
     <>
+      <br></br>
       <h3>
         {educationItem.startDate}-{educationItem.endDate}
       </h3>

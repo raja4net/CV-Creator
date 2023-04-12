@@ -18,8 +18,8 @@ const Form = ({
   onChangeEducation,
   onChangeSkills,
   onChangeExperience,
+  onAddEducation,
 }) => {
-  console.log(cv.experience);
   return (
     <>
       <FormWrapper>
@@ -32,7 +32,11 @@ const Form = ({
           onChange={onChangeExperience}
         />
         <Skills skills={cv.skills} onChange={onChangeSkills} />
-        <Education educationArray={cv.education} onChange={onChangeEducation} />
+        <Education
+          educationArray={cv.education}
+          onChange={onChangeEducation}
+          onAdd={onAddEducation}
+        />
       </FormWrapper>
     </>
   );
