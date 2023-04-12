@@ -100,6 +100,15 @@ const App = () => {
     }));
   };
 
+  const handleDeleteEducation = (id) => {
+    setCV((prevState) => {
+      const updatedEducation = prevState.education.filter(
+        (item) => item.id !== id
+      );
+      return { ...prevState, education: [...updatedEducation] };
+    });
+  };
+
   return (
     <>
       <Header />
@@ -110,6 +119,7 @@ const App = () => {
         onChangeSkills={handleChangeSkills}
         onChangeExperience={handleChangeExperience}
         onAddEducation={handleAddEducation}
+        onDeleteEducation={handleDeleteEducation}
       />
       <CVPreview cv={cv} />
     </>

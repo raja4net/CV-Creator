@@ -19,6 +19,7 @@ const Form = ({
   onChangeSkills,
   onChangeExperience,
   onAddEducation,
+  onDeleteEducation,
 }) => {
   return (
     <>
@@ -36,6 +37,7 @@ const Form = ({
           educationArray={cv.education}
           onChange={onChangeEducation}
           onAdd={onAddEducation}
+          onDelete={onDeleteEducation}
         />
       </FormWrapper>
     </>

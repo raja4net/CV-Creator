@@ -5,13 +5,14 @@ import Label from "../../util/Label";
 import Button from "../../util/Button";
 import EducationItem from "./EducationItem";
 
-const Education = ({ educationArray, onChange, onAdd }) => {
+const Education = ({ educationArray, onChange, onAdd, onDelete }) => {
   const educationItems = educationArray?.map((educationItem) => (
     <EducationItem
       key={educationItem.id}
       id={educationItem.id}
       educationItem={educationItem}
       onChange={onChange}
+      onDelete={onDelete}
     ></EducationItem>
   ));
 

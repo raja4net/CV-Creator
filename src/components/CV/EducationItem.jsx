@@ -2,7 +2,7 @@ import React from "react";
 import Input from "../../util/Input";
 import Button from "../../util/Button";
 
-const EducationItem = ({ educationItem, id, onChange }) => {
+const EducationItem = ({ educationItem, id, onChange, onDelete }) => {
   return (
     <>
       <Input
@@ -63,7 +63,9 @@ const EducationItem = ({ educationItem, id, onChange }) => {
         onChange={(e) => onChange(e, id)}
       ></Input>
 
-      <Button type={"warning"}>Delete</Button>
+      <Button type={"warning"} onClick={() => onDelete(id)}>
+        Delete
+      </Button>
     </>
   );
 };
