@@ -8,7 +8,6 @@ import EmptyCV from "./components/CV/EmptyCV";
 const App = () => {
   // console.clear();
   const [cv, setCV] = useState(EmptyCV);
-console.log(cv)
   const handleChangePersonal = (e) => {
     const { name, value, type } = e.target;
 
@@ -82,8 +81,7 @@ console.log(cv)
   };
 
   const handleAddExperience = () => {
-    console.log("clicked");
-    setCV((prevState) => ({
+   setCV((prevState) => ({
       ...prevState,
      experience: [
       ...prevState.experience,
@@ -102,7 +100,6 @@ console.log(cv)
   };
 
   const handleAddEducation = () => {
- 
     setCV((prevState) => ({
       ...prevState,
       education: [
@@ -118,6 +115,15 @@ console.log(cv)
         },
       ],
     }));
+  };
+
+  const handleDeleteExperience = (id) => {
+    setCV((prevState) => {
+      const updatedExperience = prevState.experience.filter(
+        (item) => item.id !== id
+      );
+      return { ...prevState, experience: [...updatedExperience] };
+    });
   };
 
   const handleDeleteEducation = (id) => {
@@ -139,6 +145,7 @@ console.log(cv)
         onChangeSkills={handleChangeSkills}
         onChangeExperience={handleChangeExperience}
         onAddExperience={handleAddExperience}
+        onDeleteExperience={handleDeleteExperience}
         onAddEducation={handleAddEducation}
         onDeleteEducation={handleDeleteEducation}
       />

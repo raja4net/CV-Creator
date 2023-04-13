@@ -3,7 +3,7 @@ import Input from "../../util/Input";
 import TextArea from "../../util/TextArea";
 import Button from "../../util/Button";
 
-const ExperienceItem = ({ experienceItem, id, onChange }) => {
+const ExperienceItem = ({ experienceItem, id, onChange, onDelete }) => {
   return (
     <>
       <Input
@@ -68,7 +68,7 @@ const ExperienceItem = ({ experienceItem, id, onChange }) => {
         cols='50'
         placeholder='Job Role & Responsibilities'
       ></TextArea>
-      <Button type={"warning"}>Delete</Button>
+      <Button type={"warning"} onClick={()=> onDelete(id)}>Delete</Button>
     </>
   );
 };
