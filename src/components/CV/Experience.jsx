@@ -2,7 +2,7 @@ import Wrapper from "../../util/Wrapper";
 import Button from "../../util/Button";
 import ExperienceItem from "./ExperienceItem";
 
-const Experience = ({ experienceArray, onChange }) => {
+const Experience = ({ experienceArray, onChange, onAdd }) => {
   const experienceItems = experienceArray?.map((experienceItem) => (
     <ExperienceItem
       key={experienceItem.id}
@@ -16,7 +16,7 @@ const Experience = ({ experienceArray, onChange }) => {
       <Wrapper>
         <h2> Experience</h2>
         {experienceItems}
-        <Button type={"primary"}>Add</Button>
+        <Button type={"primary"} onClick={onAdd}>Add</Button>
       </Wrapper>
     </>
   );

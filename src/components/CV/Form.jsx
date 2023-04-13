@@ -18,6 +18,7 @@ const Form = ({
   onChangeEducation,
   onChangeSkills,
   onChangeExperience,
+  onAddExperience,
   onAddEducation,
   onDeleteEducation,
 }) => {
@@ -31,6 +32,7 @@ const Form = ({
         <Experience
           experienceArray={cv.experience}
           onChange={onChangeExperience}
+          onAdd={onAddExperience}
         />
         <Skills skills={cv.skills} onChange={onChangeSkills} />
         <Education
