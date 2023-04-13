@@ -23,7 +23,12 @@ const Sidebar = ({ personalInfo, education, skills }) => {
   ));
 
   const skillArray = String(skills.skills).trim().split("\n");
-
+  const renderSkill = () => {
+  if (skillArray[0] == "undefined") {
+    return false
+  } else return true
+}
+  
   return (
     <>
       <SidebarWrapper>
@@ -38,11 +43,10 @@ const Sidebar = ({ personalInfo, education, skills }) => {
         <h2 className='section-heading'>Education</h2>
         {educationItems}
         <h2 className='section-heading'>Skills</h2>
-
         <ul>
-          {skillArray &&
-            skillArray.map((item, index) => <li key={index}>{item}</li>)}
-        </ul>
+          
+          {renderSkill() && skillArray.map((item, index) => <li key={index}>{item}</li>)}
+      </ul>
       </SidebarWrapper>
     </>
   );
