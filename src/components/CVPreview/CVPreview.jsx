@@ -3,7 +3,7 @@ import Sidebar from "./Sidebar";
 import CVHeader from "./CVHeader";
 import styled from "styled-components";
 
-export class CVPreview extends React.PureComponent {
+class CVPreview extends React.PureComponent {
   render() {
     const { cv } = this.props;
    return(
@@ -28,4 +28,4 @@ const Wrapper = styled.div`
 
 `;
 
-// export default CVPreview;
+export default CVPreview;

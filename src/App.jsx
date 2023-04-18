@@ -138,7 +138,7 @@ const App = (props) => {
     });
   };
 
-  const componentRef = useRef(null)
+  const componentRef = useRef()
   const handlePrint = useReactToPrint({
     content: () => componentRef.current,
   });
