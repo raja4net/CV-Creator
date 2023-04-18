@@ -1,13 +1,16 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { v4 as uuidv4 } from "uuid";
+import {useReactToPrint} from 'react-to-print'
 import Header from "./components/CV/Header";
 import Form from "./components/CV/Form";
 import CVPreview from "./components/CVPreview/CVPreview";
 import EmptyCV from "./components/CV/EmptyCV";
 
-const App = () => {
+const App = (props) => {
   // console.clear();
   const [cv, setCV] = useState(EmptyCV);
+  
+
   const handleChangePersonal = (e) => {
     const { name, value, type } = e.target;
 
@@ -135,6 +138,11 @@ const App = () => {
     });
   };
 
+  const componentRef = useRef(null)
+  const handlePrint = useReactToPrint({
+    content: () => componentRef.current,
+  });
+
   return (
     <>
       <Header />
@@ -148,8 +156,10 @@ const App = () => {
         onDeleteExperience={handleDeleteExperience}
         onAddEducation={handleAddEducation}
         onDeleteEducation={handleDeleteEducation}
+        onPrint={handlePrint}
       />
-      <CVPreview cv={cv} />
+      <CVPreview cv={cv} ref={componentRef} />
+      
     </>
   );
 };

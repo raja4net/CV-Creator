@@ -2,6 +2,7 @@ import PersonalDetails from "./PersonalDetails";
 import Education from "./Education";
 import Experience from "./Experience";
 import Skills from "./Skills";
+import Button from "../../util/Button"
 
 
 import styled from "styled-components";
@@ -28,6 +29,7 @@ const Form = ({
   onDeleteExperience,
   onAddEducation,
   onDeleteEducation,
+  onPrint,
 }) => {
   return (
     <>
@@ -49,6 +51,7 @@ const Form = ({
           onAdd={onAddEducation}
           onDelete={onDeleteEducation}
         />
+        <Button type={"primary"} onClick={onPrint}>Generate CV in pdf</Button>
         </FormWrapper>
     </>
   );

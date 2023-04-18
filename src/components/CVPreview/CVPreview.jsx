@@ -1,10 +1,12 @@
+import React, { Component } from "react";
 import Sidebar from "./Sidebar";
 import CVHeader from "./CVHeader";
 import styled from "styled-components";
 
-const CVPreview = ({ cv }) => {
-  return (
-    <>
+export class CVPreview extends React.PureComponent {
+  render() {
+    const { cv } = this.props;
+   return(
       <Wrapper>
         <Sidebar
           personalInfo={cv.personalInfo}
@@ -14,8 +16,8 @@ const CVPreview = ({ cv }) => {
 
         <CVHeader personalInfo={cv.personalInfo} experience={cv.experience} />
       </Wrapper>
-    </>
-  );
+    )
+  };
 };
 
 const Wrapper = styled.div`
@@ -23,7 +25,7 @@ const Wrapper = styled.div`
   display: flex;
   width: 90%;
   height: auto;
-  border: 1px solid black;
+
 `;
 
-export default CVPreview;
+// export default CVPreview;
