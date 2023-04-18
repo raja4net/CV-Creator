@@ -8,6 +8,10 @@ const Wrapper = styled.div`
   padding: 2rem;
   background-color: rgb(90, 90, 90);
   color: white;
+  @media (max-width: 500px) {
+    padding: 0;
+    margin: 0;
+  }
 `;
 
 const Header = () => {

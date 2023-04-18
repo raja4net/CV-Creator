@@ -53,13 +53,16 @@ const Sidebar = ({ personalInfo, education, skills }) => {
 };
 
 const SidebarWrapper = styled.div`
-  width: 300px;
+  width: 200px;
   background-color: #323b4c;
   display: flex;
   flex-direction: column;
   align-items: center;
   color: white;
   line-height: 1;
+  @media (max-width:500px) {
+    width: 150px;
+  }
 `;
 
 export default Sidebar;

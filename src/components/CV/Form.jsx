@@ -3,13 +3,19 @@ import Education from "./Education";
 import Experience from "./Experience";
 import Skills from "./Skills";
 
+
 import styled from "styled-components";
 
 const FormWrapper = styled.div`
-  margin: 2rem;
+  margin: 1rem;
   box-shadow: 0 1px 4px black;
   background-color: #cccccc;
-  width: 40vw;
+  width: 500px;
+  @media (max-width: 500px){
+    width: 100%;
+    margin:0;
+    padding: 0;
+  }
 `;
 
 const Form = ({
@@ -29,7 +35,7 @@ const Form = ({
         <PersonalDetails
           personalInfo={cv.personalInfo}
           onChange={onChangePersonal}
-        />
+        />  
         <Experience
           experienceArray={cv.experience}
           onChange={onChangeExperience}
@@ -43,7 +49,7 @@ const Form = ({
           onAdd={onAddEducation}
           onDelete={onDeleteEducation}
         />
-      </FormWrapper>
+        </FormWrapper>
     </>
   );
 };

@@ -29,6 +29,27 @@ body {
   font-size: 62.5%;
 }
 
+@media (max-width: 500px) {
+ h1 {
+    font-size:1.2rem !important;
+  }
+  h2 {
+  font-size: 1rem !important;
+  }
+  h3,p,li {
+    font-size: 0.7rem !important;
+    margin:0;
+    padding: 0;
+  }
+  img {
+    margin: 0;
+  }
+
+  .section-heading {
+    font-size:1.2rem;
+  }
+}
+
 h1 {
   font-size: 2.5rem;
   font-weight: 600;
@@ -56,8 +77,15 @@ img {
   margin: 0.8rem;
 }
 
+
+input {
+  width: 300px !important;
+  display: flex;
+  flex-direction: column;
+}
 textarea {
   white-space: pre-wrap;
+  width: 300px !important;
 }
 
 li {
@@ -67,9 +95,18 @@ li {
 }
 
 .profile-pic {
-  border-radius: 50%;
   width: 200px;
   height: 200px;
+}
+
+@media (max-width:500px){
+  .profile-pic {
+    width: 100px;
+    height: 100px;
+    padding: 0;
+    margin: 0;
+  }
+ 
 }
 
 .section-heading {
@@ -100,6 +137,12 @@ li {
   margin-left: -6px;
   border-left: 1px solid black;
   overflow-y: hidden;
+}
+
+@media (max-width: 500px) {
+  .experience {
+    padding-left:10px;
+  }
 }
 
 button {
