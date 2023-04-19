@@ -8,9 +8,9 @@ flex-direction: column;
   overflow: hidden;
   border-radius: 3px;
   border: none;
-  line-height: 2;
+  line-height: 1;
   margin: 10px;
-  padding: 10px;
+  padding: 5px;
 `;
 
 export default Input;

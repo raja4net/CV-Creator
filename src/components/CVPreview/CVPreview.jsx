@@ -23,9 +23,22 @@ class CVPreview extends React.PureComponent {
 const Wrapper = styled.div`
   margin: 1rem;
   display: flex;
-  width: 90%;
+  width: 800px;
   height: auto;
+  border: 2px solid black;
+  @media (max-width:800px) {
+    width: 600px;
+  }
+  @media (max-width:500px) {
+    width: 380px;
+  }
 
+  @media (max-width:400px) {
+    width: 340px;
+    margin-top:10px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 `;
 
 export default CVPreview;

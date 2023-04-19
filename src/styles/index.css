@@ -97,6 +97,7 @@ li {
 .profile-pic {
   width: 200px;
   height: 200px;
+  margin:0px;
 }
 
 @media (max-width:500px){
@@ -112,7 +113,7 @@ li {
 .section-heading {
   border-bottom: 0.5px solid rgb(147, 147, 154);
   padding-bottom: 0;
-  margin-bottom: 0;
+  margin-bottom: 5px;
   width: max-content;
 }
 
@@ -137,6 +138,11 @@ li {
   margin-left: -6px;
   border-left: 1px solid black;
   overflow-y: hidden;
+}
+
+.options {
+  margin: 10px;
+  padding: 10px;
 }
 
 @media (max-width: 500px) {

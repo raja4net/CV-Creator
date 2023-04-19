@@ -30,6 +30,7 @@ const Form = ({
   onAddEducation,
   onDeleteEducation,
   onPrint,
+  resetCV
 }) => {
   return (
     <>
@@ -51,7 +52,12 @@ const Form = ({
           onAdd={onAddEducation}
           onDelete={onDeleteEducation}
         />
-        <Button type={"primary"} onClick={onPrint}>Generate CV in pdf</Button>
+        </FormWrapper>
+        
+        <FormWrapper>
+          <h2 className="options">Options</h2>
+          <Button type={"primary"} onClick={onPrint}>Generate CV in pdf</Button>
+          <Button type={"warning"} onClick={resetCV}>Reset CV</Button>
         </FormWrapper>
     </>
   );

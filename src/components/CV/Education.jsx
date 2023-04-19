@@ -18,7 +18,7 @@ const Education = ({ educationArray, onChange, onAdd, onDelete }) => {
 
   return (
     <Wrapper>
-      <h2 className='section-heading'>Education</h2>
+      <h2>Education</h2>
       {educationItems}
       <Button type={"primary"} onClick={onAdd}>
         Add

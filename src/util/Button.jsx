@@ -12,6 +12,7 @@ const ButtonComponent = styled.button`
   width: 25.3rem;
   margin: 8px 0 8px 7px;
   font-size: 1rem;
+  font: white;
   text-align: center;
   outline:: none;
   background-color: ${({ type }) => backgroundColors[type]};

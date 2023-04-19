@@ -1,4 +1,5 @@
 import React, { useState, useRef } from "react";
+import styled from 'styled-components'
 import { v4 as uuidv4 } from "uuid";
 import {useReactToPrint} from 'react-to-print'
 import Header from "./components/CV/Header";
@@ -138,6 +139,10 @@ const App = (props) => {
     });
   };
 
+  const handleResetCV = () => {
+    setCV(EmptyCV)
+  }
+
   const componentRef = useRef()
   const handlePrint = useReactToPrint({
     content: () => componentRef.current,
@@ -146,6 +151,8 @@ const App = (props) => {
   return (
     <>
       <Header />
+      <AppWrapper>
+        <FormWrapper>
       <Form
         cv={cv}
         onChangePersonal={handleChangePersonal}
@@ -157,11 +164,28 @@ const App = (props) => {
         onAddEducation={handleAddEducation}
         onDeleteEducation={handleDeleteEducation}
         onPrint={handlePrint}
+        resetCV={handleResetCV}
       />
+      </FormWrapper>
       <CVPreview cv={cv} ref={componentRef} />
-      
+      </AppWrapper>
     </>
   );
 };
 
+const FormWrapper = styled.div`
+display: flex;
+flex-direction: column;
+`;
+
+const AppWrapper = styled.div`
+display: flex;
+justify-content: space-around !important;
+flex-direction: row !important;
+@media (max-width: 850px) {
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+`;
 export default App;
