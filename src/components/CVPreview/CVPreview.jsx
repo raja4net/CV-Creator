@@ -23,7 +23,7 @@ const Wrapper = styled.div`
   margin: 1rem;
   display: flex;
   width: 1000px;
-  height: 1000px;;
+  height: 800px;;
   border: 2px solid black;
   @media (max-width:800px) {
     width: 600px;
