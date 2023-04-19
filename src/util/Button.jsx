@@ -9,7 +9,7 @@ const Button = ({ type, children, onClick }) => {
 };
 
 const ButtonComponent = styled.button`
-  width: 25.3rem;
+  width: 19.5rem;
   margin: 8px 0 8px 7px;
   font-size: 1rem;
   color: white;
