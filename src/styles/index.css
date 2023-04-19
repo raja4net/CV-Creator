@@ -91,7 +91,7 @@ textarea {
 li {
   font-size: 1rem;
   line-height: 1.5;
-  margin-left: -50px;
+  margin-left: -30px;
 }
 
 .profile-pic {
@@ -143,6 +143,11 @@ li {
 .options {
   margin: 10px;
   padding: 10px;
+}
+
+.divider {
+  border-bottom: 0.5px solid rgb(147, 147, 154);
+  width: 100%;
 }
 
 @media (max-width: 500px) {

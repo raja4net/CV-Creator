@@ -13,7 +13,6 @@ class CVPreview extends React.PureComponent {
           education={cv.education}
           skills={cv.skills}
         />
-
         <CVHeader personalInfo={cv.personalInfo} experience={cv.experience} />
       </Wrapper>
     )
@@ -23,11 +22,12 @@ class CVPreview extends React.PureComponent {
 const Wrapper = styled.div`
   margin: 1rem;
   display: flex;
-  width: 800px;
-  height: auto;
+  width: 1000px;
+  height: 1000px;;
   border: 2px solid black;
   @media (max-width:800px) {
     width: 600px;
+    height: 1000px;
   }
   @media (max-width:500px) {
     width: 380px;

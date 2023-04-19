@@ -8,12 +8,13 @@ const EducationItem = ({ educationItem }) => {
       <h3>
         {educationItem.degree} 
         </h3>
-        <span>
+        <h3>
         ({educationItem.studyField})
-      </span>
+      </h3>
       <h3>
         {educationItem.institute}, {educationItem.location}
       </h3>
+      <div className="divider"> </div>
     </>
   );
 };

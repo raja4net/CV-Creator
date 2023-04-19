@@ -146,6 +146,7 @@ const App = (props) => {
   const componentRef = useRef()
   const handlePrint = useReactToPrint({
     content: () => componentRef.current,
+   
   });
 
   return (
@@ -167,7 +168,9 @@ const App = (props) => {
         resetCV={handleResetCV}
       />
       </FormWrapper>
-      <CVPreview cv={cv} ref={componentRef} />
+       
+        <CVPreview cv={cv} ref={componentRef} />
+     
       </AppWrapper>
     </>
   );
@@ -177,6 +180,8 @@ const FormWrapper = styled.div`
 display: flex;
 flex-direction: column;
 `;
+
+
 
 const AppWrapper = styled.div`
 display: flex;

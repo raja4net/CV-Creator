@@ -9,7 +9,7 @@ const ExperienceItem = ({ experienceItem }) => {
           <h3>
             {experienceItem.startDate}-{experienceItem.endDate}
           </h3>
-          <h3>{experienceItem.employer}</h3>
+          <h3>{experienceItem.employer}, {experienceItem.city}-{experienceItem.country}</h3>
           <h2>{experienceItem.title}</h2>
           <p>{experienceItem.role}</p>
         </div>
