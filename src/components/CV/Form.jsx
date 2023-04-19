@@ -19,6 +19,10 @@ const FormWrapper = styled.div`
   }
 `;
 
+const BtnWrapper = styled.div`
+margin-left:20px;
+`
+
 const Form = ({
   cv,
   onChangePersonal,
@@ -56,8 +60,10 @@ const Form = ({
         
         <FormWrapper>
           <h2 className="options">Options</h2>
-          <Button type={"primary"} onClick={onPrint}>Generate CV in pdf</Button>
-          <Button type={"warning"} onClick={resetCV}>Reset CV</Button>
+          <BtnWrapper>
+            <Button type={"primary"} onClick={onPrint}>Generate CV in pdf</Button>
+            <Button type={"warning"} onClick={resetCV}>Reset CV</Button>
+          </BtnWrapper>
         </FormWrapper>
     </>
   );
