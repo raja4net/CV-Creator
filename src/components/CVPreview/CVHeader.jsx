@@ -30,6 +30,9 @@ const CVHeader = ({ personalInfo, experience }) => {
             <h1>
               {firstname} {lastname}
             </h1>
+            <h3><a href={github} target={"_blank"}>{github} </a></h3>
+            <h3><a href={linkedin} target={"_blank"}>{linkedin}</a> </h3> 
+            <h3><a href={"https://twitter.com/" + twitter} target={"_blank"}> {twitter}</a></h3>
             <p>{profession}</p>
             <p>{about}</p>
           </div>
